@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .mobile-md {
+    @apply md:hidden
+  }
+
+  .desktop-md {
+    @apply hidden md:visible
+  }
+ 
+  .mobile-lg {
+    @apply lg:hidden
+  }
+
+  .desktop-lg {
+    @apply hidden lg:block
+  }
+}
