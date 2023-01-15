@@ -4,55 +4,136 @@ export type Project = {
   title: Record<string, string>;
   tecnologys: string;
   description?: string;
+  figmaUrl?: string;
+  youtubeUrl?: string;
+  codeUrl?: string;
 };
 
 export const projects: Project[] = [
   {
-    id: "aba",
-    miniature:
-      "https://pbs.twimg.com/media/Fk0klCpaYAIC802?format=png&name=large",
+    id: "figure-store",
+    miniature: "/figure_store.jpg",
     title: {
-      en: "Project name",
-      "pt-BR": "Nome do projeto",
+      en: "Figure store",
+      "pt-BR": "Loja de figures",
     },
-    tecnologys: "react native, emotion, react query",
+    tecnologys: "react, nextjs, emotioncss, react-query, prisma",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    figmaUrl:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsZv5SVKpdqLSR1kY1HVUDb%2FAnime-figure-store%3Fnode-id%3D0%253A1%26t%3D7QPYTYwX9mVXRl80-1",
+    codeUrl: "https://github.com/duduBTW/figure-store",
+    youtubeUrl: "https://www.youtube.com/embed/okycbW8Rhhk",
   },
   {
-    id: "aba2",
-    miniature:
-      "https://pbs.twimg.com/media/Fk1DZtcaYAAmc43?format=jpg&name=large",
+    id: "commission",
+    miniature: "/commission.jpg",
     title: {
-      en: "Project name 2",
-      "pt-BR": "Nome do projeto 2",
+      en: "Commission app",
+      "pt-BR": "Sites de comissão",
     },
-    tecnologys: "vue, nuxt, tailwind, prisma",
+    tecnologys: "react, nextjs, emotioncss, react-query, prisma",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    figmaUrl:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F0hcdboX2qek0J6YMcnpk3i%2FCommission%3Fnode-id%3D0%253A1%26t%3D2zBmgqACo97METq6-1",
+    codeUrl: "https://github.com/duduBTW/commissionv2",
   },
   {
-    id: "aba3",
-    miniature:
-      "https://pbs.twimg.com/media/FksIKeiaAAAoTLi?format=png&name=large",
+    id: "book-creator",
+    miniature: "/book_creator.jpg",
     title: {
-      en: "Bigger project name that takes more of the screen",
-      "pt-BR": "Nome maior que toma mais da tela",
+      en: "Book creator",
+      "pt-BR": "Criador de livros",
     },
-    tecnologys: "react native, emotion, react query, test bigger text",
+    tecnologys: "vue, nuxtjs, tailwindcss, prisma",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    figmaUrl:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FslOV82juJNOvQjj2FNL4Sf%2FLeitor%3Fnode-id%3D7518%253A482%26t%3DgkoHGEb8durXh1Bu-1",
+    codeUrl: "https://github.com/duduBTW/leitor",
+    youtubeUrl: "https://www.youtube.com/embed/HibYy5OYEgY"
   },
   {
-    id: "aba4",
-    miniature:
-      "https://pbs.twimg.com/media/FkuzHW1agAEVVaQ?format=png&name=large",
+    id: "book-reader",
+    miniature: "/book_reader.jpg",
     title: {
-      en: "Bigger project name that takes more of the screen",
-      "pt-BR": "Nome maior que toma mais da tela",
+      en: "Book reader",
+      "pt-BR": "Leitor de livros",
     },
-    tecnologys: "react native, emotion, react query, test bigger text",
+    tecnologys: "react native, expo, tailwindcss, prisma",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    figmaUrl:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FslOV82juJNOvQjj2FNL4Sf%2FLeitor%3Fnode-id%3D7850%253A755%26t%3DDtRxv1ZMQdqChL9r-1",
+    codeUrl: "https://github.com/duduBTW/leitor",
   },
+  {
+    id: "serie-watcher",
+    miniature: "/serie_watcher.jpg",
+    title: {
+      en: "Serie watcher app",
+      "pt-BR": "App para assistir series",
+    },
+    tecnologys: "react native, expo, emotioncss",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    figmaUrl:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FzzW8aDwchZnGFzAdL9RNlM%2FUntitled%3Fnode-id%3D0%253A1%26t%3DEedfs6MWiVkEDadJ-1",
+    youtubeUrl: "https://www.youtube.com/embed/g-mwZLBFdy0",
+    codeUrl: "https://github.com/duduBTW/serie-watcher",
+  },
+  {
+    id: "personal",
+    miniature: "/personal.jpg",
+    title: {
+      en: "Personal project",
+      "pt-BR": "Site pessoal",
+    },
+    tecnologys: "react, nextjs, tailwindcss, next-traslate",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    figmaUrl:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FNYRHQh0iAlSxmh7CXnzgpg%2FPersonal%3Fnode-id%3D7518%253A483%26t%3D3H0UkluZseO9ZPuL-1",
+    codeUrl: "https://github.com/duduBTW/personal-v2",
+  },
+
+  {
+    id: "utopia",
+    miniature: "/utopia.jpg",
+    title: {
+      en: "Utopia institutional website",
+      "pt-BR": "Website institucional utopia",
+    },
+    tecnologys: "react, nextjs, emotioncss",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    figmaUrl:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FjLIZy8qhEvujWlHQJ9GGvY%2FUtopia%3Fnode-id%3D0%253A1%26t%3DdqZBbHfYreyuXdpO-1",
+    codeUrl: "https://github.com/duduBTW/site-institucional-utopia",
+  },
+  // {
+  //   id: "aba3",
+  //   miniature:
+  //     "https://pbs.twimg.com/media/FksIKeiaAAAoTLi?format=png&name=large",
+  //   title: {
+  //     en: "Bigger project name that takes more of the screen",
+  //     "pt-BR": "Nome maior que toma mais da tela",
+  //   },
+  //   tecnologys: "react native, emotion, react query, test bigger text",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  // },
+  // {
+  //   id: "aba4",
+  //   miniature:
+  //     "https://pbs.twimg.com/media/FkuzHW1agAEVVaQ?format=png&name=large",
+  //   title: {
+  //     en: "Bigger project name that takes more of the screen",
+  //     "pt-BR": "Nome maior que toma mais da tela",
+  //   },
+  //   tecnologys: "react native, emotion, react query, test bigger text",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  // },
 ];

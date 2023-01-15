@@ -55,7 +55,7 @@ const Projects = () => {
 
   return (
     <section className="my-32">
-      <h3 className="mb-5 text-xl font-bold text-violet-600">
+      <h3 className="mb-5 text-xl font-bold text-violet-600 md:text-2xl">
         {t("projectsTitle")}
       </h3>
       <ProjectHomeGrid />
@@ -79,12 +79,16 @@ const AboutMe = () => {
 
   return (
     <section className="my-32 lg:w-3/4">
-      <h3 className="mb-8 text-lg font-medium text-violet-600 ">
+      <h3 className="relative mb-8 text-lg font-medium text-violet-600 md:text-xl">
         {t("home:aboutMeTitle")}
+        <div className="top- absolute top-1/2 right-full mr-6 h-px w-screen -translate-y-1/2 bg-violet-200" />
       </h3>
+
       <p className="text-gray-500">{t("home:aboutMe")}</p>
 
-      <h4 className="mt-16 font-medium text-violet-600">Experience</h4>
+      <h4 className="mt-16 font-medium text-violet-600">
+        {t("home:experienceTitle")}
+      </h4>
       <ExperienceCard
         title="Prosesmt"
         subTitle={t("home:experienceProsesmtDesc")}
@@ -99,7 +103,9 @@ const AboutMe = () => {
         to={t("common:now")}
         miniature="/uninter-logo.png"
       />
-      <h4 className="mt-16 font-medium text-violet-600">Education</h4>
+      <h4 className="mt-16 font-medium text-violet-600">
+        {t("home:educationTitle")}
+      </h4>
       <ExperienceCard
         title={t("home:educationEniacTitle")}
         subTitle={t("home:educationEniacDesc")}
@@ -112,14 +118,18 @@ const AboutMe = () => {
 };
 
 const Skills = () => {
+  const { t } = useTranslation("home");
   const skillsList = Object.entries(skills);
 
   return (
     <section className="my-32">
-      <h3 className="text-lg font-medium text-violet-600">Skills</h3>
+      <h3 className="relative -mb-5 text-lg font-medium text-violet-600 md:text-xl">
+        {t("skillsTitle")}
+        <div className="top- absolute top-1/2 right-full mr-6 h-px w-screen -translate-y-1/2 bg-violet-200" />
+      </h3>
 
       {skillsList.map(([sectionTitle, skills]) => (
-        <div key={sectionTitle} className="mt-10">
+        <div key={sectionTitle} className="mt-12">
           <h5 className="mb-4 font-medium text-gray-400">{sectionTitle}</h5>
 
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">

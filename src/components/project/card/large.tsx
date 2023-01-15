@@ -1,4 +1,5 @@
 import type { Project } from "constants/projects";
+import Image from "next/image";
 import Link from "next/link";
 import { useTitle } from "../home/grid";
 
@@ -6,8 +7,13 @@ const ProjectCardLarge = ({ project }: { project: Project }) => {
   const title = useTitle(project.title);
 
   return (
-    <Link href={`/projects/${project.id}`} className="flex flex-col gap-4">
-      <img
+    <Link
+      href={`/projects/${project.id}`}
+      className="-m-4  flex flex-col gap-4 p-4 hover:bg-gray-50 focus:bg-gray-50"
+    >
+      <Image
+        width={400}
+        height={400}
         className="aspect-square w-full border border-gray-500 border-opacity-25 object-cover"
         src={project.miniature}
         alt={`Miniature ${title}`}

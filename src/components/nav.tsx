@@ -1,5 +1,11 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
+import setLanguage from "next-translate/setLanguage";
+import useTranslation from "next-translate/useTranslation";
+
+// components
 import Translate2Icon from "remixicon-react/Translate2Icon";
 import IconButton from "components/icon/Button";
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
 const Nav = ({
   children,
@@ -13,9 +19,15 @@ const Nav = ({
       <div className="relative flex justify-between px-5 text-violet-600  md:container">
         <div className="flex items-center gap-6 text-violet-400">
           {startIcon}
-          <IconButton>
-            <Translate2Icon />
-          </IconButton>
+          <DropdownMenu.Root>
+            <DropdownMenu.Trigger>
+              <IconButton>
+                <Translate2Icon />
+              </IconButton>
+            </DropdownMenu.Trigger>
+
+            <LanguageMenu />
+          </DropdownMenu.Root>
         </div>
         <div className="text-xl font-medium">{children}</div>
         {children && (
@@ -24,6 +36,56 @@ const Nav = ({
       </div>
       <div className="absolute right-16 bottom-0 left-0 h-px w-6 bg-violet-300 md:w-12" />
     </nav>
+  );
+};
+
+const LanguageMenu = () => {
+  return (
+    <DropdownMenu.Portal>
+      <DropdownMenu.Content align="start" className="z-30 mt-3 bg-gray-50">
+        <CountryMenuItem
+          lang="en"
+          flagUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/2560px-Flag_of_Great_Britain_%281707%E2%80%931800%29.svg.png"
+        >
+          English
+        </CountryMenuItem>
+        <CountryMenuItem
+          lang="pt-BR"
+          flagUrl="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png"
+        >
+          Portuguese
+        </CountryMenuItem>
+      </DropdownMenu.Content>
+    </DropdownMenu.Portal>
+  );
+};
+
+const CountryMenuItem = ({
+  lang,
+  children,
+  flagUrl,
+}: {
+  lang: string;
+  children: React.ReactNode;
+  flagUrl: string;
+}) => {
+  const { lang: activeLang } = useTranslation();
+  const isActiveLang = lang === activeLang;
+
+  return (
+    <DropdownMenu.Item
+      onClick={async () => await setLanguage(lang)}
+      className="flex cursor-pointer items-center gap-4 py-3 pl-4 pr-8 focus:bg-violet-100"
+    >
+      <img
+        src={flagUrl}
+        alt={`${lang} flag`}
+        className="aspect-square w-6 rounded-full object-cover"
+      />
+      <span className={isActiveLang ? "font-medium text-violet-500" : ""}>
+        {children}
+      </span>
+    </DropdownMenu.Item>
   );
 };
 

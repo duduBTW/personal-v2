@@ -3,6 +3,7 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import type { ParsedUrlQuery } from "querystring";
 import useTranslation from "next-translate/useTranslation";
 import { useTitle } from "components/project/home/grid";
+import { useRouter } from "next/router";
 
 // components
 import Nav from "components/nav";
@@ -10,8 +11,10 @@ import ArrowLeftLineIcon from "remixicon-react/ArrowLeftLineIcon";
 import Link from "next/link";
 import IconButton from "components/icon/Button";
 import ArrowRightSLineIcon from "remixicon-react/ArrowRightSLineIcon";
+import GithubLineIcon from "remixicon-react/GithubLineIcon";
 
 const Project: NextPage<{ project: Project }> = ({ project }) => {
+  const { back } = useRouter();
   const { t } = useTranslation();
   const title = useTitle(project.title);
 
@@ -19,57 +22,72 @@ const Project: NextPage<{ project: Project }> = ({ project }) => {
     <>
       <Nav
         startIcon={
-          <Link passHref href="/projects">
+          <button onClick={back}>
             <IconButton>
               <ArrowLeftLineIcon />
             </IconButton>
-          </Link>
+          </button>
         }
       >
         {t("common:projectTitle")}
       </Nav>
 
       <main className="px-5 py-8 md:container ">
-        <div className="relative overflow-hidden md:py-12">
-          <div className="box-border md:mx-auto md:aspect-square md:max-h-80">
-            <img
-              src={project.miniature}
-              alt=""
-              className="relative z-20 h-full w-full object-cover object-center"
-            />
-          </div>
-          <div className="absolute top-0 z-10 h-full w-full bg-black/70" />
-          <img
-            src={project.miniature}
-            alt=""
-            className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 transform blur-2xl"
-          />
-        </div>
+        <Miniature src={project.miniature} />
 
         <div className="lg:mb-32 lg:bg-gray-50 lg:px-16 lg:pb-2 lg:pt-2">
           <h1 className="mt-10 mb-3 w-3/4 text-2xl">{title}</h1>
           <div className="mb-8 h-px w-full bg-gray-300" />
+          <p className="mb-3 text-lg text-gray-600">
+            Created with{" "}
+            <span className="text-violet-600">{project.tecnologys}</span>.
+          </p>
           <p className="mb-16 text-lg text-gray-600">{project.description}</p>
 
-          <h2 className="mb-4 text-xl font-medium text-violet-600">
-            {t("project:prototypeTitle")}
-          </h2>
-          <iframe
-            src="https://www.figma.com/embed?embed_host=dudubtw_personal&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FM7l7FGPxbjMNX1flWtEIn2%2FUntitled%3Fnode-id%3D0%253A1%26t%3DZOHH2D9yqwAwSvtK-1"
-            className="mb-16 aspect-square w-full md:aspect-video"
-            allowFullScreen
-          />
+          {project.codeUrl && (
+            <div className="mb-16">
+              <h2 className="mb-4 text-xl font-medium text-violet-600">
+                {t("project:codeTitle")}
+              </h2>
+              <a
+                href={project.codeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex w-full gap-2  hover:underline"
+              >
+                <GithubLineIcon className="text-gray-400" />
+                <span>GitHub</span>
+              </a>
+            </div>
+          )}
 
-          <h2 className="mb-4 text-xl font-medium text-violet-600">
-            {t("project:videoTitle")}
-          </h2>
-          <iframe
-            src="https://www.youtube.com/embed/YPQjHUw4KcE"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            className="aspect-video w-full"
-            allowFullScreen
-          />
+          {project.figmaUrl && (
+            <>
+              <h2 className="mb-4 text-xl font-medium text-violet-600">
+                {t("project:prototypeTitle")}
+              </h2>
+              <iframe
+                src={project.figmaUrl}
+                className="mb-16 aspect-square w-full md:aspect-video"
+                allowFullScreen
+              />
+            </>
+          )}
+
+          {project.youtubeUrl && (
+            <>
+              <h2 className="mb-4 text-xl font-medium text-violet-600">
+                {t("project:videoTitle")}
+              </h2>
+              <iframe
+                src={project.youtubeUrl}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                className="aspect-video w-full"
+                allowFullScreen
+              />
+            </>
+          )}
 
           <Link
             href="/projects"
@@ -84,6 +102,26 @@ const Project: NextPage<{ project: Project }> = ({ project }) => {
         </div>
       </main>
     </>
+  );
+};
+
+const Miniature = ({ src }: { src: string }) => {
+  return (
+    <div className="relative overflow-hidden md:py-12">
+      <div className="box-border md:mx-auto md:aspect-square md:max-h-80">
+        <img
+          src={src}
+          alt=""
+          className="relative z-20 h-full w-full object-cover object-center"
+        />
+      </div>
+      <div className="absolute top-0 z-10 h-full w-full bg-black/60" />
+      <img
+        src={src}
+        alt=""
+        className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 transform blur-lg"
+      />
+    </div>
   );
 };
 
@@ -113,9 +151,7 @@ export const getStaticPaths: GetStaticPaths = ({ locales }) => {
 export const getStaticProps: GetStaticProps = ({ params }) => {
   const id = params?.["id"];
   if (typeof id !== "string") {
-    return {
-      notFound: true,
-    };
+    throw new Error("No id found!");
   }
 
   const project = projects.find((project) => project.id === id);

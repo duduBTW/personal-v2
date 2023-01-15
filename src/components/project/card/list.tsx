@@ -4,13 +4,19 @@ import { useTitle } from "../home/grid";
 
 // components
 import Link from "next/link";
+import Image from "next/image";
 
 const ProjectCardList = ({ project }: { project: Project }) => {
   const title = useTitle(project.title);
 
   return (
-    <Link href={`/projects/${project.id}`} className="flex gap-4 lg:gap-6">
-      <img
+    <Link
+      href={`/projects/${project.id}`}
+      className="-m-4 flex gap-4 p-4 hover:bg-gray-50 focus:bg-gray-50 lg:gap-6"
+    >
+      <Image
+        width={400}
+        height={400}
         className="aspect-square w-32 border border-gray-500 border-opacity-25 object-cover lg:w-48"
         src={project.miniature}
         alt={`Miniature ${title}`}

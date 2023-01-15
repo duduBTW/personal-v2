@@ -5,8 +5,8 @@ import useTranslation from "next-translate/useTranslation";
 import Nav from "components/nav";
 import ArrowLeftLineIcon from "remixicon-react/ArrowLeftLineIcon";
 import Link from "next/link";
-import ProjectAllGrid from "components/project/grid";
 import IconButton from "components/icon/Button";
+import ProjectAllGrid from "components/project/grid";
 
 const Projects: NextPage = () => {
   const { t } = useTranslation("common");
