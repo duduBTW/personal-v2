@@ -5,5 +5,7 @@
   "to": "to",
   "now": "now",
   "contactTitle": "Contact",
-  "contactDesc": "You can enter in contact using the email bellow"
+  "contactDesc": "You can enter in contact using the email bellow",
+  "en": "English",
+  "pt-BR": "Portuguese"
 }

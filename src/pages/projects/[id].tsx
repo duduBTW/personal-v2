@@ -39,10 +39,11 @@ const Project: NextPage<{ project: Project }> = ({ project }) => {
           <h1 className="mt-10 mb-3 w-3/4 text-2xl">{title}</h1>
           <div className="mb-8 h-px w-full bg-gray-300" />
           <p className="mb-3 text-lg text-gray-600">
-            Created with{" "}
+            {t("project:createdTitle")}{" "}
             <span className="text-violet-600">{project.tecnologys}</span>.
           </p>
-          <p className="mb-16 text-lg text-gray-600">{project.description}</p>
+          <p className="mb-12" />
+          {/* <p className="mb-16 text-lg text-gray-600">{project.description}</p> */}
 
           {project.codeUrl && (
             <div className="mb-16">

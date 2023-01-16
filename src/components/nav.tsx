@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-misused-promises */
 import setLanguage from "next-translate/setLanguage";
 import useTranslation from "next-translate/useTranslation";
 
@@ -46,15 +45,11 @@ const LanguageMenu = () => {
         <CountryMenuItem
           lang="en"
           flagUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/2560px-Flag_of_Great_Britain_%281707%E2%80%931800%29.svg.png"
-        >
-          English
-        </CountryMenuItem>
+        />
         <CountryMenuItem
           lang="pt-BR"
           flagUrl="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png"
-        >
-          Portuguese
-        </CountryMenuItem>
+        />
       </DropdownMenu.Content>
     </DropdownMenu.Portal>
   );
@@ -62,19 +57,21 @@ const LanguageMenu = () => {
 
 const CountryMenuItem = ({
   lang,
-  children,
   flagUrl,
 }: {
   lang: string;
-  children: React.ReactNode;
   flagUrl: string;
 }) => {
-  const { lang: activeLang } = useTranslation();
+  const { lang: activeLang, t } = useTranslation("common");
   const isActiveLang = lang === activeLang;
+
+  const setLang = () => {
+    setLanguage(lang).catch((error) => console.error(error));
+  };
 
   return (
     <DropdownMenu.Item
-      onClick={async () => await setLanguage(lang)}
+      onClick={setLang}
       className="flex cursor-pointer items-center gap-4 py-3 pl-4 pr-8 focus:bg-violet-100"
     >
       <img
@@ -83,7 +80,7 @@ const CountryMenuItem = ({
         className="aspect-square w-6 rounded-full object-cover"
       />
       <span className={isActiveLang ? "font-medium text-violet-500" : ""}>
-        {children}
+        {t(lang)}
       </span>
     </DropdownMenu.Item>
   );
