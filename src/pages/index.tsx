@@ -39,11 +39,11 @@ const Hero = () => {
             Carlos Eduardo
           </h2>
         </div>
-        <img
+        {/* <img
           src="https://pbs.twimg.com/media/FlzdsbjaAAI-37_?format=jpg&name=large"
           className="ml-auto hidden h-[534px] lg:block"
           alt=""
-        />
+        /> */}
       </header>
       <div className="z-10 h-0.5 w-full bg-gray-100 md:mt-2" />
     </>
