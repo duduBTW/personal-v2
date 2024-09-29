@@ -6,142 +6,6 @@ export type Skill =
   | "more";
 
 const skills: Record<string, Skill[]> = {
-  "Frontend librarys and frameworks": [
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207",
-      name: "React",
-    },
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207",
-      name: "React native",
-    },
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/512px-Vue.js_Logo_2.svg.png?20170919082558",
-      name: "Vue",
-    },
-    {
-      image:
-        "https://i.ytimg.com/an/aAmP-WcI6dg/503422970480686737_mq.jpg?v=60ad54a1",
-      name: "Flutter",
-    },
-    {
-      image: "https://www.solidjs.com/img/logo/without-wordmark/logo.png",
-      name: "Solid",
-    },
-  ],
-  "Fullstack frameworks": [
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png",
-      name: "Next",
-    },
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Nuxt_logo.svg/1200px-Nuxt_logo.svg.png",
-      name: "Nuxt",
-    },
-  ],
-  "Frontend packeges": [
-    {
-      image:
-        "https://react-query-v3.tanstack.com/_next/static/images/emblem-light-628080660fddb35787ff6c77e97ca43e.svg",
-      name: "React query",
-    },
-    {
-      image:
-        "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png",
-      name: "Redux",
-    },
-    {
-      image:
-        "https://repository-images.githubusercontent.com/180328715/fca49300-e7f1-11ea-9f51-cfd949b31560",
-      name: "Zustand",
-    },
-    {
-      image: "https://mui.com/static/logo.png",
-      name: "Material ui",
-    },
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png",
-      name: "Tailwind CSS",
-    },
-    {
-      image:
-        "https://seeklogo.com/images/H/headless-ui-logo-034B045C5C-seeklogo.com.png",
-      name: "Headless UI",
-    },
-    {
-      image:
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEX///8AAAC/v7+qqqplZWXv7+/c3Nyvr6/Hx8f6+vqbm5vs7Ow3Nzf39/e4uLhpaWk8PDzk5OQZGRnW1taGhoaRkZFBQUFcXFxxcXEqKioICAhMTEzExMReXl4REREyMjKAgIAiIiJ2dnZRUVErKyuioqKMjIzPz88rH3YJAAAE80lEQVR4nO2d6VbiQBCFmSBbWAOKuAs68v5vODI6ZzgKSXXXjbV03/8p73eSSHd1VaXTIegXSJS/1amKcre+Wd7eLm/Wu7KoSBdx9WOE4+7F7deLlptBzwthcXfuwuvCA2F3WXfpsmudcNB89cAy4WpCuXyyMkt4SQ1waZNwTLqBH5qMDRKuwmK086S2SViEBrk3RjgLjzIzRXgfE6aFu9gaYeA7+E/4d7Etwl5sIPhCtS3CRWygtRHCq/hIVyYI+5xQfQuEa04o8HPaCiFhN1En7E4Dw/eFEBpMI2GXGwy6JUbQHXQcs3ZHT9FSOWHwgvu7kLkbvpsPHYV84Ed7UE04RYSbaiZk/lR8CPiDgbBz0P+IF4hwc82Ej4hwj4oJK0w83JkGxs8RYUTu4pRw+QyMnyNCxr7pWLg9FMbPEeEGE2+jlzAgB1ynhV5CyL9S5NIU4+eIEB4wE2ZCuCF4QHWEoP80uGUbxs8R4RMm3kQv4RwTD7e5wPhJatXmf+Xtf/fkfweM+VejOovhPxPlP5voPyOcQFbf/8lMAqdr/k9IEzjljq+mOchCpUIC1Sb+K4YYFTV3YMBcuRdNGPsqgl/CNgk7w5gwQzhgroLmEIbXQVurZA+uhMa/g60TdnoBi5tFS4167RL67wp614qU5jfc2dUhbRfb7ED8AUL/HZYHFdfnLnxw0SV70HRwotN5NwOmDaUJD6pm5eazGmWyKWc/062elZWVlZWVlVWvab/oPm9etuQ1jSnty/lr8KrNjPZX35MT0p6AKk5Xk0jbQml/thJf2hlEvfLbBs8VYbXj7w81q382C+GDcNzccSdtkaXpcyOfbcLfBD7LhBWxj0naZ7RoN9AuYe/stEMnhCHn1NJeo/QWAGiS8CUE0CBh77WZyjRhcDWMtOFQhQ9bk3YcqIhiH2nLYYqpZpL2HKR9BKApwriSO2nXAYosm5S2Tddo652QvtY2Skgu0rJKGN+yJO2cqHE0oBVCxshKaes0cRrNpb2TxGp0kTZPEqtZSdo8RbyuQWn3BDEblKXtE1R/tOSAkDvsQdp/s5pOz8wTsn4pTBCGJUcNErJvoXpC/rBDaYIGRTd8miEEzHaSRmgQH1A5YVQ/qylCxPRmaYZajQCAugkhE9akIWoFmHqkmxDykKomjDpqMkUYVHJhkhAzcFSaokaY11AzIeY11ExYuifkJmj0E269E0ImVaom5GdotBMCBlUqJ2RPcVRPiFmzaSYEfTRFMWFs/Ywdwhv3hKCPNSgmBAFmQkFlwkyYCeXln3DrnpBdoqCeEPTxIsWElD5t24T+d8D+sxj+M1H+s4moLbA0Ro38Z/X9n8z4P13zf0Lq/5Q7gUoF/9Um/iuGIKWJugn9V+75r770X0GbQBW0/0r2BLoR/HeU+O8KSqCzy393XgIdlv67ZBPodPbfrZ7AxAH6MFazhP4nfyQwvcX/BJ4EpiglMAnL/zSzBCbSJTBVMIHJkP6ne8ZMSbZG6H/KbgKTkhOYdh3zoEo7Dpb7qfPvPxpb74SdUdjqRtpulILWqNJm4xSy05D2GqkxfUssbTVa5Lo+aaPxqoi3UdonR7Rad2mXLLn/sty7es19J9IW2eo3DQSTNghQVf+sStuDyPuXVv9qePaFlHaG06g4XQUn7QuqkfOvVn9qX86ffBMeNK2Gg7fnzcviZilD+Ae0xFu4/OOaoAAAAABJRU5ErkJggg==",
-      name: "Radix UI",
-    },
-    {
-      image:
-        "https://raw.githubusercontent.com/emotion-js/emotion/main/emotion.png",
-      name: "Emotion CSS",
-    },
-    {
-      image:
-        "https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png",
-      name: "Styled components",
-    },
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png",
-      name: "SCSS",
-    },
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png",
-      name: "Bootstrap",
-    },
-    "more",
-  ],
-  Backend: [
-    {
-      image:
-        "https://seeklogo.com/images/P/prisma-logo-3805665B69-seeklogo.com.png",
-      name: "Prisma",
-    },
-    {
-      image:
-        "https://www.sqlservertutorial.net/wp-content/uploads/sql-server-tutorial.svg",
-      name: "SQL Server",
-    },
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
-      name: "Postgresql",
-    },
-    {
-      image:
-        "https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Emblem.jpg",
-      name: "MongoDB",
-    },
-    {
-      image:
-        "https://www.datarain.com.br/wp-content/uploads/2020/08/DybamoDB-logo.png",
-      name: "DynamoDB",
-    },
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg",
-      name: "SQLite",
-    },
-    {
-      image:
-        "data:image/png;base64,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",
-      name: "Express",
-    },
-    {
-      image: "https://miro.medium.com/max/400/1*5QBUnkCjT_m0amIHeweqGg.png",
-      name: "Gorilla mux",
-    },
-  ],
   Languages: [
     {
       name: "Javascript",
@@ -168,7 +32,155 @@ const skills: Record<string, Skill[]> = {
       image:
         "https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png",
     },
+    {
+      name: "Kotlin",
+      image:
+        "https://mathiasfrohlich.gallerycdn.vsassets.io/extensions/mathiasfrohlich/kotlin/1.7.1/1581441165235/Microsoft.VisualStudio.Services.Icons.Default",
+    },
   ],
+  "Frontend librarys and frameworks": [
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207",
+      name: "React",
+    },
+
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/512px-Vue.js_Logo_2.svg.png?20170919082558",
+      name: "Vue",
+    },
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
+      name: "Angular",
+    },
+    {
+      image: "https://www.solidjs.com/img/logo/without-wordmark/logo.png",
+      name: "Solid",
+    },
+    {
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5w8k4gFUT0PmmM1kBOqDQeKlN1LpjiVAwEg&s",
+      name: "Jetpack compose",
+    },
+    {
+      image:
+        "https://i.ytimg.com/an/aAmP-WcI6dg/503422970480686737_mq.jpg?v=60ad54a1",
+      name: "Flutter",
+    },
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207",
+      name: "React native",
+    },
+  ],
+  "Fullstack frameworks": [
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png",
+      name: "Next",
+    },
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Nuxt_logo.svg/1200px-Nuxt_logo.svg.png",
+      name: "Nuxt",
+    },
+  ],
+  // "Frontend packeges": [
+  //   {
+  //     image:
+  //       "https://react-query-v3.tanstack.com/_next/static/images/emblem-light-628080660fddb35787ff6c77e97ca43e.svg",
+  //     name: "React query",
+  //   },
+  //   {
+  //     image:
+  //       "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png",
+  //     name: "Redux",
+  //   },
+  //   {
+  //     image:
+  //       "https://repository-images.githubusercontent.com/180328715/fca49300-e7f1-11ea-9f51-cfd949b31560",
+  //     name: "Zustand",
+  //   },
+  //   {
+  //     image: "https://mui.com/static/logo.png",
+  //     name: "Material ui",
+  //   },
+  //   {
+  //     image:
+  //       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png",
+  //     name: "Tailwind CSS",
+  //   },
+  //   {
+  //     image:
+  //       "https://seeklogo.com/images/H/headless-ui-logo-034B045C5C-seeklogo.com.png",
+  //     name: "Headless UI",
+  //   },
+  //   {
+  //     image:
+  //       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEX///8AAAC/v7+qqqplZWXv7+/c3Nyvr6/Hx8f6+vqbm5vs7Ow3Nzf39/e4uLhpaWk8PDzk5OQZGRnW1taGhoaRkZFBQUFcXFxxcXEqKioICAhMTEzExMReXl4REREyMjKAgIAiIiJ2dnZRUVErKyuioqKMjIzPz88rH3YJAAAE80lEQVR4nO2d6VbiQBCFmSBbWAOKuAs68v5vODI6ZzgKSXXXjbV03/8p73eSSHd1VaXTIegXSJS/1amKcre+Wd7eLm/Wu7KoSBdx9WOE4+7F7deLlptBzwthcXfuwuvCA2F3WXfpsmudcNB89cAy4WpCuXyyMkt4SQ1waZNwTLqBH5qMDRKuwmK086S2SViEBrk3RjgLjzIzRXgfE6aFu9gaYeA7+E/4d7Etwl5sIPhCtS3CRWygtRHCq/hIVyYI+5xQfQuEa04o8HPaCiFhN1En7E4Dw/eFEBpMI2GXGwy6JUbQHXQcs3ZHT9FSOWHwgvu7kLkbvpsPHYV84Ed7UE04RYSbaiZk/lR8CPiDgbBz0P+IF4hwc82Ej4hwj4oJK0w83JkGxs8RYUTu4pRw+QyMnyNCxr7pWLg9FMbPEeEGE2+jlzAgB1ynhV5CyL9S5NIU4+eIEB4wE2ZCuCF4QHWEoP80uGUbxs8R4RMm3kQv4RwTD7e5wPhJatXmf+Xtf/fkfweM+VejOovhPxPlP5voPyOcQFbf/8lMAqdr/k9IEzjljq+mOchCpUIC1Sb+K4YYFTV3YMBcuRdNGPsqgl/CNgk7w5gwQzhgroLmEIbXQVurZA+uhMa/g60TdnoBi5tFS4167RL67wp614qU5jfc2dUhbRfb7ED8AUL/HZYHFdfnLnxw0SV70HRwotN5NwOmDaUJD6pm5eazGmWyKWc/062elZWVlZWVlVWvab/oPm9etuQ1jSnty/lr8KrNjPZX35MT0p6AKk5Xk0jbQml/thJf2hlEvfLbBs8VYbXj7w81q382C+GDcNzccSdtkaXpcyOfbcLfBD7LhBWxj0naZ7RoN9AuYe/stEMnhCHn1NJeo/QWAGiS8CUE0CBh77WZyjRhcDWMtOFQhQ9bk3YcqIhiH2nLYYqpZpL2HKR9BKApwriSO2nXAYosm5S2Tddo652QvtY2Skgu0rJKGN+yJO2cqHE0oBVCxshKaes0cRrNpb2TxGp0kTZPEqtZSdo8RbyuQWn3BDEblKXtE1R/tOSAkDvsQdp/s5pOz8wTsn4pTBCGJUcNErJvoXpC/rBDaYIGRTd8miEEzHaSRmgQH1A5YVQ/qylCxPRmaYZajQCAugkhE9akIWoFmHqkmxDykKomjDpqMkUYVHJhkhAzcFSaokaY11AzIeY11ExYuifkJmj0E269E0ImVaom5GdotBMCBlUqJ2RPcVRPiFmzaSYEfTRFMWFs/Ywdwhv3hKCPNSgmBAFmQkFlwkyYCeXln3DrnpBdoqCeEPTxIsWElD5t24T+d8D+sxj+M1H+s4moLbA0Ro38Z/X9n8z4P13zf0Lq/5Q7gUoF/9Um/iuGIKWJugn9V+75r770X0GbQBW0/0r2BLoR/HeU+O8KSqCzy393XgIdlv67ZBPodPbfrZ7AxAH6MFazhP4nfyQwvcX/BJ4EpiglMAnL/zSzBCbSJTBVMIHJkP6ne8ZMSbZG6H/KbgKTkhOYdh3zoEo7Dpb7qfPvPxpb74SdUdjqRtpulILWqNJm4xSy05D2GqkxfUssbTVa5Lo+aaPxqoi3UdonR7Rad2mXLLn/sty7es19J9IW2eo3DQSTNghQVf+sStuDyPuXVv9qePaFlHaG06g4XQUn7QuqkfOvVn9qX86ffBMeNK2Gg7fnzcviZilD+Ae0xFu4/OOaoAAAAABJRU5ErkJggg==",
+  //     name: "Radix UI",
+  //   },
+  //   {
+  //     image:
+  //       "https://raw.githubusercontent.com/emotion-js/emotion/main/emotion.png",
+  //     name: "Emotion CSS",
+  //   },
+  //   {
+  //     image:
+  //       "https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png",
+  //     name: "Styled components",
+  //   },
+  //   {
+  //     image:
+  //       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png",
+  //     name: "SCSS",
+  //   },
+  //   {
+  //     image:
+  //       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png",
+  //     name: "Bootstrap",
+  //   },
+  //   "more",
+  // ],
+  Backend: [
+    {
+      image:
+        "https://seeklogo.com/images/P/prisma-logo-3805665B69-seeklogo.com.png",
+      name: "Prisma",
+    },
+    {
+      image:
+        "https://www.sqlservertutorial.net/wp-content/uploads/sql-server-tutorial.svg",
+      name: "SQL Server",
+    },
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
+      name: "Postgresql",
+    },
+    {
+      image:
+        "https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Emblem.jpg",
+      name: "MongoDB",
+    },
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg",
+      name: "SQLite",
+    },
+    {
+      image:
+        "data:image/png;base64,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",
+      name: "Express",
+    },
+    {
+      image: "https://miro.medium.com/max/400/1*5QBUnkCjT_m0amIHeweqGg.png",
+      name: "Gorilla mux",
+    },
+  ],
+
   Others: [
     {
       name: "Figma",

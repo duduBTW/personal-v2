@@ -52,7 +52,50 @@ export const projects: Project[] = [
     figmaUrl:
       "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FslOV82juJNOvQjj2FNL4Sf%2FLeitor%3Fnode-id%3D7518%253A482%26t%3DgkoHGEb8durXh1Bu-1",
     codeUrl: "https://github.com/duduBTW/leitor",
-    youtubeUrl: "https://www.youtube.com/embed/HibYy5OYEgY"
+    youtubeUrl: "https://www.youtube.com/embed/HibYy5OYEgY",
+  },
+  {
+    id: "university",
+    miniature: "/university.png",
+    title: {
+      en: "University portal",
+      "pt-BR": "Portal de universidade",
+    },
+    tecnologys: "react",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    codeUrl: "https://github.com/duduBTW/university-portal/tree/main",
+    youtubeUrl: "https://www.youtube.com/embed/IvuJGoY7Orc",
+    figmaUrl:
+      "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/ugpY5jHYBf34ZomKphZrtf/University?node-id=0-1&t=9BHmAdqkZWEWS7Kc-1",
+  },
+  {
+    id: "app",
+    miniature: "/app-store.png",
+    title: {
+      en: "Application store",
+      "pt-BR": "Loja de aplicativos",
+    },
+    tecnologys: "react, vite, stylex and tanstack router",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    codeUrl: "https://github.com/duduBTW/application-store",
+    youtubeUrl: "https://www.youtube.com/embed/IvuJGoY7Orc",
+    figmaUrl:
+      "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/5Yauto2xarZGwDshfMzKV1/Untitled?node-id=0-1&t=U73SQ7vm3n28irbu-1",
+  },
+  {
+    id: "goodsmile",
+    miniature: "/Goodsmile-Company-Brand-Logo.webp",
+    title: {
+      en: "Goodsmile clone",
+      "pt-BR": "Clone do goodsmile",
+    },
+    tecnologys: "golang, typescript, webpack and tailwindcss",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    codeUrl: "https://github.com/duduBTW/goodsmile-clome",
+    youtubeUrl: "https://www.youtube.com/embed/IvuJGoY7Orc",
   },
   {
     id: "book-reader",

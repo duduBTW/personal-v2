@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { type NextPage } from "next";
 import useTranslation from "next-translate/useTranslation";
-import skills, { Skill } from "constants/skills";
+import type { Skill as SkillType } from "constants/skills";
+import skills from "constants/skills";
 
 // components
 import ProjectHomeGrid from "components/project/home/grid";
@@ -81,7 +82,7 @@ const AboutMe = () => {
     <section className="my-32 lg:w-3/4">
       <h3 className="relative mb-8 text-lg font-medium text-violet-600 md:text-xl">
         {t("home:aboutMeTitle")}
-        <div className="top- absolute top-1/2 right-full mr-6 h-px w-screen -translate-y-1/2 bg-violet-200" />
+        <div className="top- absolute right-full top-1/2 mr-6 h-px w-screen -translate-y-1/2 bg-violet-200" />
       </h3>
 
       <p className="text-gray-500">{t("home:aboutMe")}</p>
@@ -90,18 +91,25 @@ const AboutMe = () => {
         {t("home:experienceTitle")}
       </h4>
       <ExperienceCard
-        title="Prosesmt"
+        title="Prosesmt - Full stack dev"
         subTitle={t("home:experienceProsesmtDesc")}
         from="2019"
         to="2021"
         miniature="/prosesmt-logo.png"
       />
       <ExperienceCard
-        title="Uninter"
+        title="Uninter - Front end dev"
         subTitle={t("home:experienceUninterDesc")}
         from="2021"
-        to={t("common:now")}
+        to="2023"
         miniature="/uninter-logo.png"
+      />
+      <ExperienceCard
+        title="Personetics - Front end dev"
+        subTitle={t("home:experiencePersoneticsDesc")}
+        from="2023"
+        to={t("common:now")}
+        miniature="/logo-y-Personetics-600x600-1.png"
       />
       <h4 className="mt-16 font-medium text-violet-600">
         {t("home:educationTitle")}
@@ -125,7 +133,7 @@ const Skills = () => {
     <section className="my-32">
       <h3 className="relative -mb-5 text-lg font-medium text-violet-600 md:text-xl">
         {t("skillsTitle")}
-        <div className="top- absolute top-1/2 right-full mr-6 h-px w-screen -translate-y-1/2 bg-violet-200" />
+        <div className="top- absolute right-full top-1/2 mr-6 h-px w-screen -translate-y-1/2 bg-violet-200" />
       </h3>
 
       {skillsList.map(([sectionTitle, skills]) => (
@@ -146,7 +154,7 @@ const Skills = () => {
   );
 };
 
-const Skill = ({ skill }: { skill: Skill }) => {
+const Skill = ({ skill }: { skill: SkillType }) => {
   let content = (
     <span className="w-full text-center text-violet-500">
       And much, much more...
