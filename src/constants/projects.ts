@@ -26,20 +26,6 @@ export const projects: Project[] = [
     youtubeUrl: "https://www.youtube.com/embed/okycbW8Rhhk",
   },
   {
-    id: "commission",
-    miniature: "/commission.jpg",
-    title: {
-      en: "Commission app",
-      "pt-BR": "Sites de comissão",
-    },
-    tecnologys: "react, nextjs, emotioncss, react-query, prisma",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    figmaUrl:
-      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F0hcdboX2qek0J6YMcnpk3i%2FCommission%3Fnode-id%3D0%253A1%26t%3D2zBmgqACo97METq6-1",
-    codeUrl: "https://github.com/duduBTW/commissionv2",
-  },
-  {
     id: "book-creator",
     miniature: "/book_creator.jpg",
     title: {
@@ -61,13 +47,27 @@ export const projects: Project[] = [
       en: "University portal",
       "pt-BR": "Portal de universidade",
     },
-    tecnologys: "react",
+    tecnologys: "react and styled components",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     codeUrl: "https://github.com/duduBTW/university-portal/tree/main",
     youtubeUrl: "https://www.youtube.com/embed/QmBYqm4_JA4",
     figmaUrl:
       "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/ugpY5jHYBf34ZomKphZrtf/University?node-id=0-1&t=9BHmAdqkZWEWS7Kc-1",
+  },
+  {
+    id: "commission",
+    miniature: "/commission.jpg",
+    title: {
+      en: "Commission app",
+      "pt-BR": "Sites de comissão",
+    },
+    tecnologys: "react, nextjs, emotioncss, react-query, prisma",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    figmaUrl:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F0hcdboX2qek0J6YMcnpk3i%2FCommission%3Fnode-id%3D0%253A1%26t%3D2zBmgqACo97METq6-1",
+    codeUrl: "https://github.com/duduBTW/commissionv2",
   },
   {
     id: "app",
