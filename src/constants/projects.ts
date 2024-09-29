@@ -65,7 +65,7 @@ export const projects: Project[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     codeUrl: "https://github.com/duduBTW/university-portal/tree/main",
-    youtubeUrl: "https://www.youtube.com/embed/IvuJGoY7Orc",
+    youtubeUrl: "https://www.youtube.com/embed/QmBYqm4_JA4",
     figmaUrl:
       "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/ugpY5jHYBf34ZomKphZrtf/University?node-id=0-1&t=9BHmAdqkZWEWS7Kc-1",
   },
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     codeUrl: "https://github.com/duduBTW/application-store",
-    youtubeUrl: "https://www.youtube.com/embed/IvuJGoY7Orc",
+    youtubeUrl: "https://www.youtube.com/embed/M0pfAKm5Ty4",
     figmaUrl:
       "https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/5Yauto2xarZGwDshfMzKV1/Untitled?node-id=0-1&t=U73SQ7vm3n28irbu-1",
   },
